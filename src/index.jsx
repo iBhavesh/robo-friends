@@ -11,5 +11,4 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-/*test GPG2*/
 serviceWorker.unregister();
