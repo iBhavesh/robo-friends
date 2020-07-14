@@ -9,6 +9,10 @@ class App extends Component {
     this.state = {
       robots: [],
       searchField: "",
+      /*user: {
+        count: 1,
+        name: 'Bhavesh Sharma'
+      },*/
     };
     this.onSearchChange = this.onSearchChange.bind(this);
   }
@@ -23,9 +27,17 @@ class App extends Component {
 
   onSearchChange(event) {
     this.setState({ searchField: event.target.value });
+    //Update State CallBack
+    /*this.setState(state => ({
+      user: {
+        ...state.user,
+        count: state.user.count++
+      }
+    }));*/
   }
 
   render() {
+    //console.log('state.user:', this.state.user);
     const filteredRobots = this.state.robots.filter((robot) =>
       robot.name.toLowerCase().includes(this.state.searchField.toLowerCase())
     );
